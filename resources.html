@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030609"><meta name="description" content="Explore NASA datasets, APIs, tools, guides and space learning resources with VELTRIXA.">
+  <title>Resources | VELTRIXA</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=stardom@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><script defer src="data.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body class="page-resources">
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.5 1.5-2 4-2 6 2-.1 4.5-.6 6-2"/><path d="m9 15-2-2c1-4 5-8 13-10-2 8-6 12-10 13l-1-1Z"/><path d="m9 16-2-2"/><circle cx="15.5" cy="8.5" r="1.6"/><path d="m8 9-4.5.4L1 13l6 1M15 16l1 5 3.6-2.5.4-4.5"/></symbol>
+  <symbol id="database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></symbol>
+  <symbol id="book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6C9 3 6 3 2 4v15c4-1 7-1 10 2 3-3 6-3 10-2V4c-4-1-7-1-10 2ZM12 6v15"/></symbol>
+  <symbol id="search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.8" cy="10.8" r="7.3"/><path d="m16.4 16.4 5 5"/></symbol>
+  <symbol id="arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M14 5l7 7-7 7"/></symbol>
+  <symbol id="menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l14 14M19 5 5 19"/></symbol>
+  </svg>
+
+  <header class="site-header resource-header">
+    <div class="header-inner container-home">
+      <a class="brand" href="index.html" aria-label="VELTRIXA — Home"><img src="assets/veltrixa-logo.png" alt="VELTRIXA" width="1445" height="601"></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-menu"><svg><use href="#menu"></use></svg></button>
+      <nav class="main-nav" id="main-menu" aria-label="Main navigation"><a class="nav-link" href="index.html">Home</a><a class="nav-link active" href="resources.html" aria-current="page">Resources</a><a class="nav-link" href="about-us.html">About Us</a></nav>
+    </div>
+  </header>
+  <main class="resources-main">
+    <div class="resources-art" aria-hidden="true">
+      <video autoplay loop muted playsinline src="assets/space-video.mp4"></video>
+    </div>
+    <section class="resources-intro container-wide" aria-labelledby="resources-title">
+      <h1 id="resources-title">Resources</h1>
+      <p>Browse NASA PSI combustion investigations and<br class="desktop-break"> historical references to explore the science of spacecraft fire safety.</p>
+    </section>
+    <section class="rank-panel container-wide" id="rank-panel" aria-labelledby="rank-title">
+      <div class="rank-head">
+        <div><h2 id="rank-title">Investigation Relevance Ranking</h2><p>Pick an environment, a habitat and a safety goal. NASA PSI combustion investigations are re-ranked with a transparent score.</p></div>
+        <div class="rank-export"><button class="btn btn-outline btn-small" type="button" id="export-csv">Export CSV</button><button class="btn btn-outline btn-small" type="button" id="export-json">Export JSON</button></div>
+      </div>
+      <div class="chip-row" id="env-chips" role="group" aria-label="Cabin environment">
+        <button class="filter-btn" type="button" data-env="earth-air" aria-pressed="false">1G Earth Air</button>
+        <button class="filter-btn is-selected" type="button" data-env="artemis-moon" aria-pressed="true">Artemis Moon Base</button>
+        <button class="filter-btn" type="button" data-env="pure-oxygen" aria-pressed="false">100% Pure Oxygen</button>
+      </div>
+      <div class="chip-row" id="habitat-chips" role="group" aria-label="Habitat type">
+        <button class="filter-btn" type="button" data-habitat="iss" aria-pressed="false">Spacecraft / ISS</button>
+        <button class="filter-btn is-selected" type="button" data-habitat="lunar" aria-pressed="true">Lunar base</button>
+        <button class="filter-btn" type="button" data-habitat="mars" aria-pressed="false">Mars base</button>
+        <button class="filter-btn" type="button" data-habitat="rover" aria-pressed="false">Pressurized rover</button>
+      </div>
+      <div class="chip-row" id="goal-chips" role="group" aria-label="Safety goal">
+        <button class="filter-btn is-selected" type="button" data-goal="all" aria-pressed="true">All goals</button>
+        <button class="filter-btn" type="button" data-goal="habitat" aria-pressed="false">Habitat safety</button>
+        <button class="filter-btn" type="button" data-goal="model" aria-pressed="false">Modeling data</button>
+        <button class="filter-btn" type="button" data-goal="controls" aria-pressed="false">Next-gen controls</button>
+      </div>
+      <ol class="rank-list" id="rank-list"></ol>
+      <p class="rank-note">Score = habitat relevance (1–5 × 4) + goal match (+6, or +2 per goal when “All”) + oxygen-sensitivity boost for the selected environment (Moon +3, Pure O₂ +5). Relevance weights are team-assigned editorial judgments, not NASA values. Every citation links straight to its NASA source. Investigation list: <a href="https://www.nasa.gov/physical-sciences-informatics-psi/psi-investigations-by-research-area/" target="_blank" rel="noopener noreferrer">NASA PSI</a>.</p>
+    </section>
+    <section class="resource-explorer container-wide" aria-label="Browse NASA resources">
+      <div class="resource-toolbar">
+        <div class="resource-filters" role="group" aria-label="Filter resources">
+          <button class="filter-btn is-selected" type="button" data-filter="all" aria-pressed="true">All Resources</button>
+          <button class="filter-btn" type="button" data-filter="datasets" aria-pressed="false"><svg class="icon"><use href="#database"></use></svg>Experiments</button>
+          <button class="filter-btn" type="button" data-filter="guides" aria-pressed="false"><svg class="icon"><use href="#book"></use></svg>History & Tech</button>
+        </div>
+        <label class="resource-search"><svg class="icon"><use href="#search"></use></svg><input type="search" id="resource-search" placeholder="Search resources..." autocomplete="off" aria-label="Search resources"></label>
+      </div>
+      <div class="resource-grid" id="resource-grid">
+
+        <!-- Historical Accidents -->
+        <article class="resource-card" data-category="guides" data-keywords="apollo 1 apollo 13 mir oxygen tank generator history accident">
+          <div class="resource-card-visual"><img src="assets/res-history.webp" alt="" loading="lazy"></div>
+          <div class="resource-card-content"><div class="resource-card-copy"><h2><svg class="icon"><use href="#book"></use></svg>Space Fire History</h2><p>Lessons from the Apollo 1 pure oxygen fire, Apollo 13 explosion, and the 1997 Mir oxygen generator failure.</p><p class="cite" data-cite="apollo1;mir"></p></div><a class="btn btn-small btn-primary" href="https://www.nasa.gov/johnson/HWHAP/apollo-1-fire" target="_blank" rel="noopener noreferrer" aria-label="Read about the Apollo 1 fire on NASA.gov (opens in a new tab)">Read History <svg class="icon"><use href="#arrow-right"></use></svg></a></div>
+        </article>
+
+        <!-- Earth Spinoffs -->
+        <article class="resource-card" data-category="guides" data-keywords="spinoff earth technology smoke detector mining">
+          <div class="resource-card-visual"><img src="assets/res-spinoffs.webp" alt="" loading="lazy"></div>
+          <div class="resource-card-content"><div class="resource-card-copy"><h2><svg class="icon"><use href="#book"></use></svg>Earth Spinoffs</h2><p>NASA Space Shuttle smoke detectors were adapted for mining operations, drastically reducing false alarms.</p><p class="cite" data-cite="spinoff"></p></div><a class="btn btn-small btn-primary" href="https://spinoff.nasa.gov/node/9407" target="_blank" rel="noopener noreferrer" aria-label="View Spinoffs (opens in a new tab)">View Spinoffs <svg class="icon"><use href="#arrow-right"></use></svg></a></div>
+        </article>
+      </div>
+      <div class="resource-empty" id="resource-empty" hidden><svg><use href="#search"></use></svg><h2>No resources found</h2><p>Try a different search or select another category.</p><button class="btn btn-primary" type="button" id="reset-filters">Show all resources</button></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container-wide footer-inner"><span>© <span data-year>2026</span> VELTRIXA</span><span>Independent NASA hackathon team project • Not an official NASA website.</span><a href="about-us.html">About the project</a></div></footer>
+
+  <!-- VELTRIXA AI FAB & Sidebar -->
+  <button class="ai-fab" id="ai-fab" type="button" aria-label="Open VELTRIXA AI">AI ✦</button>
+  <aside class="ai-sidebar" id="ai-sidebar" aria-hidden="true" inert>
+    <div class="ai-header">
+      <div>
+        <h3>VELTRIXA AI</h3>
+        <span class="ai-status"><span class="status-dot"></span> Online - NASA Evidence Mode</span>
+      </div>
+      <button class="ai-close" id="ai-close" type="button" aria-label="Close AI"><svg><use href="#close"></use></svg></button>
+    </div>
+    <div class="ai-chat-window" id="ai-chat-window">
+      <div class="ai-system-msg">Ask about NASA microgravity experiments (ACME, BASS, SAFFire, FLEX), historical events (Mir, Apollo), or spinoffs.</div>
+    </div>
+    <div class="ai-suggestions">
+      <span class="suggestions-title">SUGGESTED QUESTIONS</span>
+      <button type="button" data-ask="Which investigations matter most for a lunar base?">• Which investigations matter most for a lunar base?</button>
+      <button type="button" data-ask="What is BASS-II and why does it matter?">• What is BASS-II and why does it matter?</button>
+      <button type="button" data-ask="What data supports flammability modeling?">• What data supports flammability modeling?</button>
+    </div>
+    <form class="ai-input-area" id="ai-form">
+      <input type="text" id="ai-input" placeholder="Ask VELTRIXA..." autocomplete="off" required>
+      <button type="submit" aria-label="Send message"><svg><use href="#arrow-right"></use></svg></button>
+    </form>
+  </aside>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030609"><meta name="description" content="Meet VELTRIXA, the team building a space data experience for a NASA hackathon.">
+  <title>About Us | VELTRIXA</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=stardom@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="data.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body class="page-about">
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.5 1.5-2 4-2 6 2-.1 4.5-.6 6-2"/><path d="m9 15-2-2c1-4 5-8 13-10-2 8-6 12-10 13l-1-1Z"/><path d="m9 16-2-2"/><circle cx="15.5" cy="8.5" r="1.6"/><path d="m8 9-4.5.4L1 13l6 1M15 16l1 5 3.6-2.5.4-4.5"/></symbol>
+  <symbol id="play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></symbol>
+  <symbol id="database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></symbol>
+  <symbol id="target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="13" r="9"/><circle cx="11" cy="13" r="5"/><circle cx="11" cy="13" r="1"/><path d="m11 13 9-9M17 3l3 1 1 3"/></symbol>
+  <symbol id="menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l14 14M19 5 5 19"/></symbol>
+  <symbol id="arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M14 5l7 7-7 7"/></symbol>
+  </svg>
+
+  <header class="site-header about-header">
+    <div class="header-inner container-home">
+      <a class="brand" href="index.html" aria-label="VELTRIXA — Home"><img src="assets/veltrixa-logo.png" alt="VELTRIXA" width="1445" height="601"></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-menu"><svg><use href="#menu"></use></svg></button>
+      <nav class="main-nav" id="main-menu" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="resources.html">Resources</a>
+        <a class="nav-link active" href="about-us.html" aria-current="page">About Us</a>
+      </nav>
+    </div>
+  </header>
+  <main class="about-main">
+    <section class="about-hero" aria-labelledby="about-title">
+      <div class="about-hero-art" aria-hidden="true">
+        <video autoplay loop muted playsinline src="assets/space-video.mp4"></video>
+      </div>
+      <div class="container-about about-hero-inner">
+        <h1 id="about-title">About Us</h1>
+        <p>We are VELTRIXA, a student team building a space intelligence platform that turns NASA’s data into meaningful insights and accessible exploration tools.</p>
+      </div>
+    </section>
+
+    <!-- Glass Panel Mission & Vision -->
+    <section class="values-grid container-about" id="mission" aria-label="Our mission and vision">
+      <article class="value-card glass-panel">
+        <div class="value-icon"><svg><use href="#target"></use></svg></div>
+        <div class="value-divider"></div>
+        <div class="value-content">
+          <h2>Our Mission</h2>
+          <p>To transform NASA's complex microgravity combustion data into an intuitive, AI-driven platform that empowers engineers to design safer spacecraft for the Artemis generation.</p>
+        </div>
+      </article>
+      <article class="value-card glass-panel">
+        <div class="value-icon"><svg><use href="#rocket"></use></svg></div>
+        <div class="value-divider"></div>
+        <div class="value-content">
+          <h2>Our Vision</h2>
+          <p>A future where the hazards of deep-space exploration are predictable, manageable, and universally understood through accessible open-source intelligence.</p>
+        </div>
+      </article>
+    </section>
+    <section class="team-section container-about" id="team" aria-label="Team information">
+      <div class="team-header">
+        <h2 class="section-title"><span></span>System Agents</h2>
+      </div>
+      <div class="crew-grid">
+        <article class="ai-crew-card">
+          <div class="card-terminal-bar">
+             <span class="term-btn red"></span><span class="term-btn yellow"></span><span class="term-btn green"></span>
+             <span class="term-title">sys.agent.vtx1</span>
+          </div>
+          <div class="ai-avatar-container">
+             <img src="assets/team-astronaut.webp" alt="BA Abdullah" width="100" height="100">
+          </div>
+          <h3>BA Abdullah</h3>
+          <div class="ai-role">
+             <span class="sys-label">ROLE_</span> 
+             <span class="sys-val">Team Lead</span>
+          </div>
+          <div class="ai-status">
+             <span class="sys-label">STAT_</span> 
+             <span class="sys-val"><span class="status-dot"></span> ACTIVE</span>
+          </div>
+        </article>
+        <article class="ai-crew-card">
+          <div class="card-terminal-bar">
+             <span class="term-btn red"></span><span class="term-btn yellow"></span><span class="term-btn green"></span>
+             <span class="term-title">sys.agent.vtx2</span>
+          </div>
+          <div class="ai-avatar-container">
+             <img src="assets/team-astronaut.webp" alt="WAKA Shannon" width="100" height="100">
+          </div>
+          <h3>WAKA Shannon</h3>
+          <div class="ai-role">
+             <span class="sys-label">ROLE_</span> 
+             <span class="sys-val">Project Researcher</span>
+          </div>
+          <div class="ai-status">
+             <span class="sys-label">STAT_</span> 
+             <span class="sys-val"><span class="status-dot"></span> ACTIVE</span>
+          </div>
+        </article>
+        <article class="ai-crew-card">
+          <div class="card-terminal-bar">
+             <span class="term-btn red"></span><span class="term-btn yellow"></span><span class="term-btn green"></span>
+             <span class="term-title">sys.agent.vtx3</span>
+          </div>
+          <div class="ai-avatar-container">
+             <img src="assets/team-astronaut.webp" alt="MHF Hishma" width="100" height="100">
+          </div>
+          <h3>MHF Hishma</h3>
+          <div class="ai-role">
+             <span class="sys-label">ROLE_</span> 
+             <span class="sys-val">Project Researcher</span>
+          </div>
+          <div class="ai-status">
+             <span class="sys-label">STAT_</span> 
+             <span class="sys-val"><span class="status-dot"></span> ACTIVE</span>
+          </div>
+        </article>
+        <article class="ai-crew-card">
+          <div class="card-terminal-bar">
+             <span class="term-btn red"></span><span class="term-btn yellow"></span><span class="term-btn green"></span>
+             <span class="term-title">sys.agent.vtx4</span>
+          </div>
+          <div class="ai-avatar-container">
+             <img src="assets/team-astronaut.webp" alt="UI Akarshana" width="100" height="100">
+          </div>
+          <h3>UI Akarshana</h3>
+          <div class="ai-role">
+             <span class="sys-label">ROLE_</span> 
+             <span class="sys-val">Developer</span>
+          </div>
+          <div class="ai-status">
+             <span class="sys-label">STAT_</span> 
+             <span class="sys-val"><span class="status-dot"></span> ACTIVE</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container-about footer-inner"><span>© <span data-year>2026</span> VELTRIXA</span><span>Independent NASA hackathon team project • Not an official NASA website.</span><span>Explore resources from the navigation</span></div></footer>
+
+  <!-- VELTRIXA AI FAB & Sidebar -->
+  <button class="ai-fab" id="ai-fab" type="button" aria-label="Open VELTRIXA AI">AI ✦</button>
+  <aside class="ai-sidebar" id="ai-sidebar" aria-hidden="true" inert>
+    <div class="ai-header">
+      <div>
+        <h3>VELTRIXA AI</h3>
+        <span class="ai-status"><span class="status-dot"></span> Online - NASA Evidence Mode</span>
+      </div>
+      <button class="ai-close" id="ai-close" type="button" aria-label="Close AI"><svg><use href="#close"></use></svg></button>
+    </div>
+    <div class="ai-chat-window" id="ai-chat-window">
+      <div class="ai-system-msg">Ask about NASA microgravity experiments (ACME, BASS, SAFFire, FLEX), historical events (Mir, Apollo), or spinoffs.</div>
+    </div>
+    <div class="ai-suggestions">
+      <span class="suggestions-title">SUGGESTED QUESTIONS</span>
+      <button type="button" data-ask="Which investigations matter most for a lunar base?">• Which investigations matter most for a lunar base?</button>
+      <button type="button" data-ask="What is BASS-II and why does it matter?">• What is BASS-II and why does it matter?</button>
+      <button type="button" data-ask="What data supports flammability modeling?">• What data supports flammability modeling?</button>
+    </div>
+    <form class="ai-input-area" id="ai-form">
+      <input type="text" id="ai-input" placeholder="Ask VELTRIXA..." autocomplete="off" required>
+      <button type="submit" aria-label="Send message"><svg><use href="#arrow-right"></use></svg></button>
+    </form>
+  </aside>
+</body>
+</html>
